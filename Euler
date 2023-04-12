@@ -1,0 +1,14 @@
+import math
+
+# Input parameters
+E = float(input("Enter the modulus of elasticity in psi: "))
+A = float(input("Enter the cross-sectional area in in^2: "))
+L = float(input("Enter the length of the column in inches: "))
+r = float(input("Enter the radius of gyration in inches: "))
+k = float(input("Enter the end conditions factor (0.5 for fixed-fixed, 1 for pinned-fixed, 2 for free-fixed): "))
+
+# Calculation of critical buckling load
+Pcr = (math.pi**2 * E * A) / ((k * L / r)**2)
+
+# Output result
+print(f"Critical buckling load: {Pcr:.2f} lbs")
